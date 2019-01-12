@@ -5,6 +5,20 @@ Base RecyclerView Adapter for easier and faster implementation of recyclerview,
 Implement your RecyclerView in less than 5 min with full cusmizable adapter that fit all your basic needs
 Just start with designing you list item and let the magic happend 
 
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.Galoomba:RecyclerViewBaseAdapter:0.1.0'
+	}
+
 # How to use!
 * Make you Data module Class
 * Extend one of the Custom Views and design your list item 
@@ -30,22 +44,9 @@ public class Pets {
     public void setPetType(String petType) {
         this.petType = petType;
     }
-
-    public String getPetName() {
-        return petName;
-    }
-
-    public void setPetName(String petName) {
-        this.petName = petName;
-    }
-
-    public String getImgURl() {
-        return imgURl;
-    }
-
-    public void setImgURl(String imgURl) {
-        this.imgURl = imgURl;
-    }
+    
+   ...
+   
 }
 ```
 
