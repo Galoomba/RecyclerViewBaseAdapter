@@ -20,9 +20,9 @@ Step 2. Add the dependency
 	}
 
 # How to use!
-* Make you Data module Class
+* Make your Data module Class
 * Extend one of the Custom Views and design your list item 
-* Attatch the Adapter to the recyclerView
+* Attach the Adapter to the recyclerView
 
 ### First implement your module class
 ``` java
