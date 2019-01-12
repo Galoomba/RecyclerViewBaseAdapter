@@ -76,6 +76,45 @@ public class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.ViewHolder>
          return dataList.size();
     }
 
+    public void insert(T object){
+        dataList.add(object);
+        notifyDataSetChanged();
+    }
+
+    public void insertAt(T object, int index){
+        dataList.add(index,object);
+        notifyDataSetChanged();
+    }
+
+    public void replace(T object, int index)
+    {
+        dataList.remove(index);
+        dataList.add(index,object);
+        notifyDataSetChanged();
+    }
+
+    public void update(T object, int index){
+        replace(object,index);
+    }
+
+    public void delete(int index){
+        dataList.remove(index);
+        notifyDataSetChanged();
+    }
+    public void deleteAll(){
+        dataList.clear();
+        notifyDataSetChanged();
+    }
+
+    public void changeAllData(ArrayList<T> list){
+        dataList.clear();
+        dataList.addAll(list);
+        notifyDataSetChanged();
+    }
+    public int getListSize(){
+        return dataList.size();
+    }
+
     public  static class ViewHolder extends RecyclerView.ViewHolder {
         public RecyclerViewView view;
         public ViewHolder(RecyclerViewView itemView) {
